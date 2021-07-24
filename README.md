@@ -63,13 +63,37 @@ daily_returns.plot.box(figsize=(15,20), title="Daily Returns of Funds and S&P 50
 
 ```
 
-**....**
+**Calculating standard deviation of the Four Fund Portfolios and the S&P 500; sorted from smallest to largest.**
 ```
-profit_early = profitable_trades_early * bitstamp_sliced.loc['2018-01-16']
+standard_deviation = daily_returns.std().sort_values()
+standard_deviation
+```
 
-profit_per_trade_early = profit_early.dropna()
+**Calculating annualized standard deviation of the Four Fund Portfolios and the S&P 500; sorted from smallest to largest.**
+```
+year_trading_days = 252
+annualized_standard_deviation = standard_deviation * np.sqrt(year_trading_days)
+annualized_standard_deviation.sort_values()
 
-profit_per_trade_early.head()
+```
+
+**Visualizing the 21-Day Rolling Average of the Four Fund Portfolios and the S&P 500.**
+```
+daily_returns.rolling(window=21).mean().plot(figsize=(15,10), title="21-Day Rolling Average of Funds and S&P 500")
+
+```
+
+**Calculating the Sharpe Ratio of the Four Fund Portfolios and the S&P 500.**
+```
+sharpe_ratios = average_annual_return / annualized_standard_deviation
+sharpe_ratios.sort_values()
+
+```
+
+**Visualizing the Sharpe Ratios of the Four Fund Portfolios and the S&P 500 in a bar chart.**
+```
+sharpe_ratios.plot.bar(figsize=(10,8),title="Sharpe Ratios")
+
 ```
 
 **....**
@@ -78,4 +102,15 @@ profit_per_trade_early.plot(figsize=(10, 7), title="Profit Per Trade - Early Dat
 
 ```
 
+**....**
+```
+profit_per_trade_early.plot(figsize=(10, 7), title="Profit Per Trade - Early Date", color="green")
+
+```
+
+**....**
+```
+profit_per_trade_early.plot(figsize=(10, 7), title="Profit Per Trade - Early Date", color="green")
+
+```
 ---
