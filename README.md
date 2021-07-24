@@ -77,7 +77,7 @@ annualized_standard_deviation.sort_values()
 
 ```
 
-**Visualizing the 21-Day Rolling Average of the Four Fund Portfolios and the S&P 500.**
+**Visualizing the 21-day Rolling Average of the Four Fund Portfolios and the S&P 500.**
 ```
 daily_returns.rolling(window=21).mean().plot(figsize=(15,10), title="21-Day Rolling Average of Funds and S&P 500")
 
@@ -96,21 +96,36 @@ sharpe_ratios.plot.bar(figsize=(10,8),title="Sharpe Ratios")
 
 ```
 
-**....**
+**Calculating the variance of the S&P 500 by using a 60-day rolling window and Pandas var function.**
+```
+spy_rolling_60_variance = daily_returns['S&P 500'].rolling(window=60).var()
+spy_rolling_60_variance.tail()
+
+```
+
+**Calculating the covariance of Berkshire Hathaway Inc by using a 60-day rolling window, Pandas var function, and S&P 500.**
 ```
 profit_per_trade_early.plot(figsize=(10, 7), title="Profit Per Trade - Early Date", color="green")
 
 ```
 
-**....**
+**Calculating the beta of Berkshire Hathaway Inc based on the 60-day rolling covariance; listing last five rows of info.**
 ```
-profit_per_trade_early.plot(figsize=(10, 7), title="Profit Per Trade - Early Date", color="green")
+brk_rolling_60_beta = brk_rolling_60_covariance / spy_rolling_60_variance
+brk_rolling_60_beta.tail()
 
 ```
 
-**....**
+**Calculating the average value of the 60-day rolling beta of Berkshire Hathaway Inc.**
 ```
-profit_per_trade_early.plot(figsize=(10, 7), title="Profit Per Trade - Early Date", color="green")
+brk_rolling_60_beta_mean = brk_rolling_60_beta.mean()
+brk_rolling_60_beta_mean
+
+```
+
+**Visualizing the 60-day rolling beta of Berkshire Hathaway Inc.**
+```
+brk_rolling_60_beta.plot(figsize=(15,10), title="60-Day Rolling Beta: BERKSHIRE HATHAWAY INC")
 
 ```
 ---
