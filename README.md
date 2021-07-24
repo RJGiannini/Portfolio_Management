@@ -17,3 +17,65 @@ This project leverages python 3.7 with the following:
 * [matplotlib inline](https://github.com/matplotlib/matplotlib) - Comprehensive library for creating static, animated, and interactive visualizations in Python.
 
 ---
+
+### Installation Guide
+
+Before running the application first install the following dependencies.
+
+```python
+  pip install jupyterlab
+  pip install pandas
+  pip install numpy
+  pip install matplotlib
+```
+
+---
+
+## Examples
+
+**Creating daily returns DataFrame based on NAV prices of the Four Portfolios and on closing price of the S&P 500.**
+```
+daily_returns = whales_df.pct_change().dropna()
+daily_returns.head()
+
+```
+**Visualizing the daily returns data of the Four Fund Portfolios and the S&P 500 using Pandas plot function.**
+```
+daily_returns.plot(figsize=(10,7), title="Daily Returns")
+
+```
+
+**Calculating, creating, and displaying the last five rows of cumulative returns DataFrame for the Four Fund Portfolios and the S&P 500.**
+```
+cumulative_returns = (1 + daily_returns).cumprod()
+cumulative_returns.tail()
+```
+
+**Visualizing the cumulative return data of the Four Fund Portfolios and the S&P 500 using Pandas plot function.**
+```
+cumulative_returns.plot(figsize=(10,5), title="Cumulative Returns of Funds and S&P 500: 2014-2020")
+
+```
+
+**Visualizing the daily return data of the Four Fund Portfolios and the S&P 500 using Pandas plot function and box plot parameter.**
+```
+daily_returns.plot.box(figsize=(15,20), title="Daily Returns of Funds and S&P 500")
+
+```
+
+**....**
+```
+profit_early = profitable_trades_early * bitstamp_sliced.loc['2018-01-16']
+
+profit_per_trade_early = profit_early.dropna()
+
+profit_per_trade_early.head()
+```
+
+**....**
+```
+profit_per_trade_early.plot(figsize=(10, 7), title="Profit Per Trade - Early Date", color="green")
+
+```
+
+---
