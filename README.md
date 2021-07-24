@@ -6,12 +6,14 @@ Evaluating four new investment options for inclusion in client portfolios. This 
 
 ## Technologies
 
-This project leverages python 3.7 with the following packages:
+This project leverages python 3.7 with the following:
 
-* [fire](https://github.com/google/python-fire) - For the command line interface, help page, and entrypoint.
+* [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) - JupyterLab is a web-based user interface designed for data analysis.
 
-* [questionary](https://github.com/tmbo/questionary) - For interactive user prompts and dialogs
+* [pandas](https://github.com/pandas-dev/pandas) - Flexible and powerful data analysis / manipulation library for Python.
 
-* [pytest](https://docs.pytest.org/en/stable/) - For basic assertion testing of financial calculators and filters, and filio.
+* [numpy](https://github.com/numpy/numpy) - The fundamental package for scientific computing with Python.
+
+* [matplotlib inline](https://github.com/matplotlib/matplotlib) - Comprehensive library for creating static, animated, and interactive visualizations in Python.
 
 ---
