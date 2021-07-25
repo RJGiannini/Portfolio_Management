@@ -138,7 +138,7 @@ To use the portfolio management application simply clone the repository and run 
 python risk_return_analysis.py
 ```
 
-Upon following the loan qualifier prompts you will find below various input-dependent results.
+Below you will find screenshots of varios visualizations demonstrated to help drive analysis.
 
 ![Cumulative Returns of the Four Funds and S&P 500](Images/cumulative_returns_funds-spy.png)
 
