@@ -129,3 +129,32 @@ brk_rolling_60_beta.plot(figsize=(15,10), title="60-Day Rolling Beta: BERKSHIRE 
 
 ```
 ---
+
+## Usage
+
+To use the portfolio management application simply clone the repository and run the **risk_return_analysis.py** with:
+
+```python
+python risk_return_analysis.py
+```
+
+Upon following the loan qualifier prompts you will find below various input-dependent results.
+
+![Loan Qualifier With Saved Output](Images/qualifier_saved_output.png)
+
+![Loan Qualifier With No Saved Output](Images/qualifier_no_output_save.png)
+
+![Loan Qualifier User Not Qualified](Images/qualifier_user_not_qualified.png)
+
+---
+
+## Contributors
+
+Brought to you by Robert Giannini.
+LinkedIn: https://www.linkedin.com/in/robertgianninijr/
+
+---
+
+## License
+
+MIT
