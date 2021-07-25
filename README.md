@@ -140,11 +140,19 @@ python risk_return_analysis.py
 
 Upon following the loan qualifier prompts you will find below various input-dependent results.
 
-![Loan Qualifier With Saved Output](Images/qualifier_saved_output.png)
+![Cumulative Returns of the Four Funds and S&P 500](Images/cumulative_returns_funds-spy.png)
 
-![Loan Qualifier With No Saved Output](Images/qualifier_no_output_save.png)
+![Daily Returns of the Four Funds](Images/daily_returns_funds-only.png)
 
-![Loan Qualifier User Not Qualified](Images/qualifier_user_not_qualified.png)
+![21-day rolling average of the Four Funds and S&P 500](Images/21-day-rolling-average_funds-spy.png)
+
+![21-day rolling average of the Four Funds](Images/21-day-rolling-average-funds.png)
+
+![Sharpe Ratios of the Four Funds](Images/sharpe-ratios.png)
+
+![60-day rolling beta of Berkshire Hathaway Inc](Images/60-day-rolling-beta-brk.png)
+
+![60-day rolling beta of Soros Fund Management LLC](Images/60-day-rolling-beta-soros.png)
 
 ---
 
